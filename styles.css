@@ -1,0 +1,214 @@
+/**element selector**/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header, footer {
+    background-color: lightgray;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+}
+/**absolute position**/
+header .logo {
+    position: absolute;
+    top: 130px;
+    right: 10px;
+    width: 110px;
+    height: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 3em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5em;
+}
+
+/**The hover tag**/
+nav ul li a:hover {
+    background-color: #ddd;
+    color: #333;
+}
+/**class selector**/
+.citation {
+  font-size: 0.7em;
+  font-weight: lighter;
+}
+
+.caparagraph {
+  padding: 1em 2em 2em 2em;
+  background-color: rgba(13, 107, 52, 0.3);
+  color: white;
+  font-style: oblique;
+  line-height: 1.75em;
+}
+
+ol {
+  list-style-position: outside;
+  padding: 20px;
+  background-color: rgba(13, 107, 52, 0.3);
+}
+
+ol li {
+  background: #FFFFFF;
+  color: black;
+  padding: 5px;
+}
+
+li {
+  text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+/**float property**/
+aside {
+    background-color: #f4f4f4;
+    padding: 1em;
+    width: 25%;
+    float: left;
+    box-sizing: border-box;
+}
+
+section {
+    padding: 1em;
+    width: 70%;
+    float: right;
+    box-sizing: border-box;
+}
+
+article {
+    margin-bottom: 2em;
+}
+/**font family declaration**/
+h1 {
+  font-family: fantasy;
+  font-weight: lighter;
+  color: #333;
+}
+
+h2 {
+  font-variant: small-caps;
+  text-align: center;
+  color: #333;
+}
+
+.wel2ca {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+img.bear {
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+img.bear:hover {
+    transform: scale(1.05);
+}
+
+.forms {
+  text-align: center;
+  line-height: 1.5em;
+  background-color: #F9F9F9;
+}
+
+label, input, textarea, select, table {
+    word-spacing: 3px;
+}
+
+label {
+  font-family:serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border-bottom: 1px solid #333;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+  background-color: rgba(13, 107, 52, 0.3);
+}
+
+/**relative position**/
+footer {
+    clear: both;
+    position: relative;
+    bottom: 0;
+}
+/**ID selector**/
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+#back-to-top:hover {
+    background-color: #555;
+}
+
+#form-error-message, #form-success-message {
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5em;
+}
+
+.form-group label {
+    flex: 1;
+}
+
+.form-group input, .form-group textarea {
+    flex: 2;
+}
+
+.form-group label {
+    text-align: right;
+    margin-right: 1em;
+    width: 150px; 
+}
+
+.reference li {
+  border-bottom: 1px solid #333
+}

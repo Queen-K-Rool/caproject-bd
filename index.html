@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--The title in the head-->
+    <title>California</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <!--header-->
+  <header>
+    <h1>California</h1>
+    <img class="logo" src="C:\Users\4U\Desktop\WGU\Front-end Dev\Task2\images\logo.png" alt="Logo" width="100" height="100">
+  </header>
+  <!--nav-->
+  <nav>
+    <!--Consistent navigation menu-->
+    <!--The unordered list with at least 3 items-->
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="capital.html">Sacramento</a></li>
+      <li><a href="firstcity.html">Bakersfield</a></li>
+      <li><a href="secondcity.html">Los Angeles</a></li>
+      <li><a href="contact-us.html">Contact Us</a></li>
+      <li><a href="reference.html">References</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <!--aside-->
+    <aside>
+      <h2>Demographic</h2>
+      <p >According to PPIC, one in eight US residents live in California. It is the most densely populated state. In total, the California population sits around 39 million residents.</p>
+      <p>California is one of the most diverse states in the nation. According to a 2022 survey, "27% of Californians are foreign born"</p>
+      <p>Additionally, the state of California has the eleventh youngest average population, at a youthful 37.9.
+      <p class="citation">PPIC Johnson, H, et al. (2024, January) <em>California's Population</em> https://www.ppic.org/publication/<br>californias-population/</p>
+    </aside>
+
+    <!--section-->
+    <section>
+        <article>
+          <h2 class="wel2ca">Welcome to California</h2>
+            <!--The relevant image with alt text-->
+            <!--Hyperlink embedded in an image that opens new tab-->
+            <a href="https://en.wikipedia.org/wiki/California" target="_blank">
+            <img class="bear" src="C:\Users\4U\Desktop\WGU\Front-end Dev\Task2\images\flag_of_california.svg.png" alt="California Bear" width="500" height="250">
+            </a>
+            <p class="citation">California State Flag</p>
+            <div class="caparagraph">
+
+              <p>California, the golden state, likely coined by the gold rush, is a place for adventure.
+              Boasting many different biomes such as grassland, desert, conifer, chaparral and so many more,
+              there is something for everyone in this endlessly beautiful state. Go for a dip in the refreshingly
+              cool waters along the coastline, take a stroll through a majestic forest, climb atop a beautiful
+              mountain peak - it's all here!</p>
+              <br>
+              <p>Resident of California? Visited? Leave some ideas below for others to partake in the fun of our beautiful state!</p>
+            </div>
+        </article>
+    </section>
+  </div>
+
+  <section class="forms">
+        <article>
+          <h2>Fun things to do in California?</h2>
+          <form id="fun-form">
+            <!--First name with placeholder-->
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" placeholder="First Name" required><br>
+            <!--Last name with placeholder-->
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Last Name" required><br>
+            <!--Email address with placeholder-->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email" required><br>
+            <!--Confirm email with placeholder-->
+            <label for="confirm-email">Confirm Email:</label>
+            <input type="email" id="confirm-email" name="confirm-email" placeholder="Confirm Email" required><br>
+
+            <label for="city">Select a City:</label>
+            <select id="city" name="city" required>
+              <option value="">Select a city</option>
+              <option value="sacramento">Sacramento</option>
+              <option value="bakersfield">Bakersfield</option>
+              <option value="losangeles">Los Angeles</option>
+            </select><br>
+            <!--Question & text box with placeholder-->
+            <label for="idea">Submit your idea!:</label><br>
+            <textarea id="idea" name="idea" placeholder="Type your idea here..." rows="4" cols="50" required></textarea><br><br>
+
+            <button type="submit">Submit</button>
+          </form>
+          <p id="error-message" style="color:red;"></p>
+        </article>
+        <article>
+          <h2>Top Attractions in California</h2>
+          <!--Table with at least 3 columns and 3 rows-->
+          <table>
+            <thead>
+              <tr>
+                <th>Attraction</th>
+                <th>Location</th>
+                <th>Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Disneyland</td>
+                <td>Anaheim</td>
+                <td>Theme Park</td>
+              </tr>
+              <tr>
+                <td>Golden Gate Bridge</td>
+                <td>San Francisco</td>
+                <td>Landmark</td>
+              </tr>
+              <tr>
+                <td>Yosemite National Park</td>
+                <td>Central California</td>
+                <td>National Park</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+      </section>
+
+      <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
+      <!--Javascript with email validation including if/else statement and variables-->
+      <script>
+        document.getElementById('fun-form').addEventListener('submit', function(event) {
+          var email = document.getElementById('email').value;
+          var confirmEmail = document.getElementById('confirm-email').value;
+          var errorMessage = document.getElementById('error-message');
+
+          if (email !== confirmEmail) {
+            errorMessage.textContent = 'Email addresses do not match.';
+            event.preventDefault();
+          } else {
+            errorMessage.textContent = '';
+          }
+
+        });
+
+        function scrollToTop() {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+       </script>
+
+  <footer>
+    <p>© 2024 State Project Web Page</p>
+  </footer>
+
+</body>
+</html>
